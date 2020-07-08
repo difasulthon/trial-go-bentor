@@ -340,7 +340,8 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
 
                     float distance = loc1.distanceTo(loc2);
                     distanceToDestination += loc1.distanceTo(destinationLoc) / 1000;
-                    if (distanceToDestination < 1) {
+
+                    if (distanceToDestination < 1.0) {
                         ridePrice = 5000.0;
                     }
                     if (distanceToDestination > 1) {
@@ -453,6 +454,7 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
         geofire.removeLocation(user_id);
 
         distanceToDestination = 0;
+        ridePrice = 0.0;
 
         if (pickupMarker != null) {
             pickupMarker.remove();
@@ -460,6 +462,7 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
         if (mDriverMarker != null) {
             mDriverMarker.remove();
         }
+
 
         mRequest.setText("Panggil Bentor");
 
@@ -572,10 +575,14 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
             @Override
             public void onKeyEntered(String key, GeoLocation location) {
                 for (Marker markerIt : markers) {
-                    if (markerIt.getTag().equals(key)) {
-                        return;
+                    if (markerIt.getTag()!=null) {
+                        if (markerIt.getTag().equals(key)) {
+                            return;
+                        }
                     }
                 }
+
+
 
                 LatLng driverLocation = new LatLng(location.latitude, location.longitude);
 
@@ -588,18 +595,16 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
             @Override
             public void onKeyExited(String key) {
                 for (Marker markerIt : markers) {
-                    if (markerIt.getTag().equals(key)) {
+                    if (markerIt.getTag().equals(key))
                         markerIt.remove();
-                    }
                 }
             }
 
             @Override
             public void onKeyMoved(String key, GeoLocation location) {
                 for (Marker markerIt : markers) {
-                    if (markerIt.getTag().equals(key)) {
+                    if (markerIt.getTag().equals(key))
                         markerIt.setPosition(new LatLng(location.latitude, location.longitude));
-                    }
                 }
             }
 
