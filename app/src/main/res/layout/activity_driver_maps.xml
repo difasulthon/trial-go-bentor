@@ -139,7 +139,7 @@ tools:context=".DriverMapsActivity">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="picked customer"
+            android:text="ambil penumpang"
             android:id="@+id/rideStatus"
             android:background="@drawable/custom_button"
             android:textColor="@color/white"

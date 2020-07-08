@@ -171,7 +171,7 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
                     pickupLocation = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
                     pickupMarker = mMap.addMarker(new MarkerOptions().position(pickupLocation).title("Pickup Here").icon(BitmapDescriptorFactory.fromResource(R.drawable.image_location)));
 
-                    mRequest.setText("Getting up your driver...");
+                    mRequest.setText("Mencari pengemudi...");
 
                     getClosestDriver();
                 }
@@ -315,7 +315,7 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
                     List<Object> map = (List<Object>) snapshot.getValue();
                     double locationLat = 0;
                     double locationLng = 0;
-                    mRequest.setText("Driver Found");
+                    mRequest.setText("Pengemudi Ketemu");
                     if (map.get(0) != null) {
                         locationLat = Double.parseDouble(map.get(0).toString());
                     }

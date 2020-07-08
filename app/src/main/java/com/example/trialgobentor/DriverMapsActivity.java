@@ -136,7 +136,7 @@ public class DriverMapsActivity extends FragmentActivity implements OnMapReadyCa
                         if (destinationLatLng.latitude != 0.0 && destinationLatLng.longitude != 0.0) {
                             getRouteToMarker(destinationLatLng);
                         }
-                        mrideStatus.setText("drive complete");
+                        mrideStatus.setText("perjalanan selesai");
                         break;
                     case 2:
                         recordRide();
@@ -336,7 +336,7 @@ public class DriverMapsActivity extends FragmentActivity implements OnMapReadyCa
     }
 
     private void endRide() {
-        mrideStatus.setText("picked customer");
+        mrideStatus.setText("ambil penumpang");
         erasePolylines();
 
         String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
