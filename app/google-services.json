@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "171579117388",
+    "firebase_url": "https://trial-go-bentor.firebaseio.com",
+    "project_id": "trial-go-bentor",
+    "storage_bucket": "trial-go-bentor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171579117388:android:acf118f6e272788d9009e9",
+        "android_client_info": {
+          "package_name": "com.example.trialgobentor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171579117388-poh19e80dvsf3k99b5565hu2a80op745.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trialgobentor",
+            "certificate_hash": "ed72cd9cdd24cf575664d07120a0733175d3dc92"
+          }
+        },
+        {
+          "client_id": "171579117388-giaga9bhkq6bhb8vsh0onajm4quopf39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0vTieNJlIpSSAaLxmbUaaSEKBzbXdfdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171579117388-giaga9bhkq6bhb8vsh0onajm4quopf39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

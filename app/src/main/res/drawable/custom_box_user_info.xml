@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Membentuk sudut tumpul di empat sisi-->
+    <corners android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"></corners>
+
+    <!-- warna dasar shape-->
+    <solid android:color="#FFFFFF"> </solid>
+
+    <padding
+        android:left="0dp"
+        android:right="0dp"
+        android:bottom="0dp"
+        android:top="0dp">
+    </padding>
+
+    <stroke
+        android:color="@color/colorPrimaryDark"
+        android:width="1dp"/>
+
+</shape>

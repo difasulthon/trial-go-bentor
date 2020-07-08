@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Go Bentor</string>
+    <string name="title_activity_driver_maps">Map</string>
+    <string name="api_key">AIzaSyBKhFllAeWOXdbL3eg6fv051R5eBoC7AWU</string>
+</resources>

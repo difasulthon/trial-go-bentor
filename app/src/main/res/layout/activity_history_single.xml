@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistorySingleActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalScrollbarPosition="right"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/image_empty_photo_user"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:id="@+id/userImage"
+                    />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp"
+                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Nama"
+                android:textColor="@color/textColorLight"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Telepon"
+                android:textColor="@color/textColorLight"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Lokasi"
+                android:textColor="@color/textColorLight"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/rideLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Jarak"
+                android:textColor="@color/textColorLight"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/rideDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Harga"
+                android:textColor="@color/textColorLight"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/ridePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Tanggal"
+                android:textColor="@color/textColorLight"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/rideDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_edit_text"
+                android:clickable="false"
+                android:focusable="false"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
