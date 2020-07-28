@@ -52,6 +52,7 @@
         android:id="@+id/email"
         android:background="@drawable/custom_edit_text"
         android:layout_marginHorizontal="30dp"
+        android:hint="user@email.com"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -70,6 +71,8 @@
         android:id="@+id/password"
         android:background="@drawable/custom_edit_text"
         android:layout_marginHorizontal="30dp"
+        android:hint="password"
+        android:inputType="textPassword"
         />
     <Button
         android:layout_width="match_parent"

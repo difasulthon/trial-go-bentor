@@ -33,9 +33,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/rideId"
                 android:text="rideId"
-                android:textSize="14sp"
-                android:textColor="@color/textColor"
-                android:fontFamily="@font/nunito_sans_bold"
+                android:textSize="8sp"
+                android:textColor="@color/borderColor"
+                android:fontFamily="@font/nunito_sans"
                 android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 />
