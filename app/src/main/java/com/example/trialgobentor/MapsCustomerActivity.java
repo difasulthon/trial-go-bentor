@@ -334,21 +334,7 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
                     loc2.setLatitude(driverLatLng.latitude);
                     loc2.setLongitude(driverLatLng.longitude);
 
-                    Location destinationLoc = new Location("");
-                    destinationLoc.setLatitude(destinationLatLng.latitude);
-                    destinationLoc.setLongitude(destinationLatLng.longitude);
-
                     float distance = loc1.distanceTo(loc2);
-                    distanceToDestination += loc1.distanceTo(destinationLoc) / 1000;
-
-                    if (distanceToDestination < 1.0) {
-                        ridePrice = 5000.0;
-                    }
-                    if (distanceToDestination > 1) {
-                        ridePrice = ((Double.valueOf(distanceToDestination)) - 1) * 1850 + 5000;
-                    }
-
-                    mRidePrice.setText(formatRupiah(ridePrice));
 
                     if (distance < 100) {
                         mRequest.setText("Pengemudi disini");
@@ -484,14 +470,14 @@ public class MapsCustomerActivity extends FragmentActivity implements OnMapReady
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-
+                mMap.setMyLocationEnabled(true);
             } else {
                 checkLocationPermission();
             }
         }
 
         mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-//        mMap.setMyLocationEnabled(true);
+
     }
 
     private void checkLocationPermission() {
